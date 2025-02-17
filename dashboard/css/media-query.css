@@ -1,0 +1,175 @@
+/* Responsive-Screens-Desktop 1440px */
+
+@media only screen and (max-width:1440px) {
+    .top-content {
+        flex-direction: column-reverse;
+    }
+
+    .after-task-links {
+        display: block;
+    }
+
+    .before-task-links {
+        display: none;
+    }
+
+    .after-py {
+        padding: 12px 0;
+    }
+
+    .wrap-flex {
+        flex-wrap: wrap;
+    }
+
+
+    .custom-card,
+    .new-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .task-boards {
+        max-width: 100%;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width:1110px) {
+
+    .box-view,
+    .board,
+    .list {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+
+    #toggleMenu {
+        display: block;
+    }
+
+    .task-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100vh;
+        background: white;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        transition: left 0.3s ease-in-out;
+        z-index: 99;
+    }
+
+    .task-links.show {
+        left: 0;
+    }
+
+    .task-links li {
+        margin-bottom: 10px;
+    }
+
+    #xClose,
+    .li-a {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width:922px) {
+
+    .left-side {
+        display: none;
+    }
+
+    .Mobile-menu {
+        display: block;
+    }
+
+    .slide-mobile {
+        width: 100%;
+        padding: 0 32px;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .main-container {
+        border: none;
+    }
+
+    .r-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .search-task {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .line-2 {
+        display: none;
+    }
+
+    .right-end {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:614px) {
+
+    h2 {
+        font-size: 20px !important;
+    }
+
+
+}
+
+
+@media only screen and (max-width:546px) {
+    .wrap {
+        flex-direction: column-reverse;
+        gap: 12px;
+    }
+
+    .r-wrap {
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media only screen and (max-width:475px) {
+
+    .content,
+    .slide-mobile,
+    .top-content {
+        padding: 0 20px;
+    }
+
+    .task-boards {
+        padding: 32px 20px;
+    }
+
+    .after {
+        display: block;
+    }
+
+    .before {
+        display: none;
+    }
+}
+
+@media only screen and(max-width:375px) {
+    h3 {
+        display: none !important;
+    }
+}

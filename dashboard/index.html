@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Task Board : Dashboard</title>
+  <link rel="icon" href="assets/images/fevicon.svg" >
+  <link rel="stylesheet" href="css/style.css" >
+  <link rel="stylesheet" href="css/media-query.css" >
+  <link rel="stylesheet" href="fonts/stylesheet.css" >
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" >
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="d-flex">
+      <!-- LEFT-SIDE MENU-SLIDE -->
+
+      <div class="left-side" id="left-side">
+        <div class="content d-flex justify-content-between align-items-center">
+          <h3 class="font-inter-bold mb-0 desktop-only">Dashboard</h3>
+          <div onclick="closeMenu()" class="menu-toggle-btn">
+            <a href="#menu">
+              <img src="assets/images/menu_open.svg" alt="Menu Open" class="menu-bar" >
+            </a>
+          </div>
+        </div>
+        <div class="slide-menu">
+          <div class="user-profile d-flex justify-content-between align-items-center pt-4">
+            <div class="d-flex gap-4 profile-box">
+              <div class="progress-container flex flex-1">
+                <div class="progress-border"></div>
+                <a href="#user">
+                  <img src="assets/images/Avatar.png" alt="User" class="avatar" >
+                </a>
+              </div>
+              <a href="#">
+                <div class="user-name desktop-only font-inter-bold" style="color: #1f2633">
+                  Nancy Martino
+                  <h6 class="user-profashion font-inter-bold">Designer</h6>
+                </div>
+              </a>
+            </div>
+            <div class="unfold-btn desktop-only">
+              <a href="#" id="toggleDropdown">
+                <img src="assets/images/unfold_more.svg" alt="unfold more" ></a>
+            </div>
+          </div>
+          <div id="dropdownProfiles" class="dropdown-content">
+            <div class="user-profile d-flex justify-content-between align-items-center pt-4">
+              <div class="d-flex gap-4 profile-box">
+                <div class="progress-container flex flex-1">
+                  <div class="progress-border"></div>
+                  <a href="#user">
+                    <img src="assets/images/Avatar-5.png" alt="User" class="avatar" >
+                  </a>
+                </div>
+                <a href="#">
+                  <div class="user-name desktop-only font-inter-bold" style="color: #1f2633">
+                    Williams James
+                    <h6 class="user-profashion font-inter-bold">
+                      Graphic Designer
+                    </h6>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="user-profile d-flex justify-content-between align-items-center pt-4">
+              <div class="d-flex gap-4 profile-box">
+                <div class="progress-container flex flex-1">
+                  <div class="progress-border"></div>
+                  <a href="#user">
+                    <img src="assets/images/Avatar-2.png" alt="User" class="avatar" >
+                  </a>
+                </div>
+                <a href="#">
+                  <div class="user-name desktop-only font-inter-bold" style="color: #1f2633">
+                    Jack Hennary
+                    <h6 class="user-profashion font-inter-bold">Developer</h6>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="line my-3"></div>
+
+          <div class="dash-menu">
+            <!-- Dashboard Heading -->
+            <div class="d-flex justify-content-between align-items-center py-3 toggle-menu"
+                 data-bs-toggle="collapse"
+                 data-bs-target="#dashboard-collapse"
+                 aria-expanded="false"
+                 aria-controls="dashboard-collapse"
+                 role="button"
+                 style="cursor: pointer;"
+                 id="dashboard-toggle">
+              <h5 class="text-uppercase font-inter-bold desktop-only mb-0">
+                Dashboard
+              </h5>
+              <img src="assets/images/expand_less.svg" alt="Expand menu" class="expand-icon">
+            </div>
+          
+            <!-- Dashboard Menu -->
+            <div class="collapse" id="dashboard-collapse">
+              
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#inbox">
+                      <img src="assets/images/inbox.svg" alt="Inbox" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Inbox
+                    </div>
+                  </div>
+          
+                  <div class="inbox-msg fs-10 fw-bolder desktop-only d-flex justify-content-center align-items-center">
+                    4
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#drive-files">
+                      <img src="assets/images/drive_folder_upload.svg" alt="drive folder upload" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Drive Files
+                    </div>
+                  </div>
+          
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    435
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#boards">
+                      <img src="assets/images/dashboard_customize.svg" alt="Boards" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Boards
+                    </div>
+                  </div>
+          
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    5
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#updates">
+                      <img src="assets/images/access_time.svg" alt="access time" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Updates
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#analytics">
+                      <img src="assets/images/data_usage.svg" alt="data usage" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Analytics
+                    </div>
+                  </div>
+          
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    2
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#crm-dashboard">
+                      <img src="assets/images/space_dashboard.svg" alt="CRM Dashboard" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      CRM Dashboard
+                    </div>
+                  </div>
+          
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    2
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#ecmmerce">
+                      <img src="assets/images/sell.svg" alt="sell" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Ecommerce
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#cryptocurrency">
+                      <img src="assets/images/payment.svg" alt="payment" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Cryptocurrency
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#projects">
+                      <img src="assets/images/lock_clock.svg" alt="lock clock" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Projects
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#nft-marketplace">
+                      <img src="assets/images/image_search.svg" alt="Image search" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      NFT Marketplace
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#settings">
+                      <img src="assets/images/tune.svg" alt="CRM Dashboard" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Settings
+                    </div>
+                  </div>
+          
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    2
+                  </div>
+                </div>
+              
+            </div>
+          
+            <div class="line my-3"></div>
+          
+            <!-- Projects Heading -->
+            <div class="d-flex justify-content-between align-items-center py-3 toggle-menu"
+                 data-bs-toggle="collapse"
+                 data-bs-target="#projects-collapse"
+                 aria-expanded="false"
+                 aria-controls="projects-collapse"
+                 role="button"
+                 style="cursor: pointer;"
+                 id="projects-toggle">
+              <h5 class="text-uppercase font-inter-bold desktop-only mb-0">
+                Projects
+              </h5>
+              <img src="assets/images/expand_less.svg" alt="Expand menu" class="expand-icon">
+            </div>
+          
+            <!-- Projects Menu -->
+            <div class="collapse" id="projects-collapse">
+             
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#Additional-calendar">
+                      <img src="assets/images/tag.svg" alt="tag" >
+                    </a>
+                    <div class="fs-12 desktop-only font-inter-semibold desktop-only cursor">
+                      Additional Calendar
+                    </div>
+                  </div>
+          
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    6
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#brand-logo-design">
+                      <img src="assets/images/tag.svg" alt="tag" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Brand Logo Design
+                    </div>
+                  </div>
+          
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    11
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#user-research">
+                      <img src="assets/images/tag.svg" alt="tag" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      User Research
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#marketing-sales">
+                      <img src="assets/images/tag.svg" alt="tag" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Marketing Sales
+                    </div>
+                  </div>
+          
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    23
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#new-project-template">
+                      <img src="assets/images/tag.svg" alt="tag" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      New Project Template
+                    </div>
+                  </div>
+          
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    2
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#add-new-project">
+                      <img src="assets/images/add_circle.svg" alt="Add Icon" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Add New Project
+                    </div>
+                  </div>
+                </div>
+              
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MENU-CENTER -->
+
+      <div class="menu-center">
+        <!-- Mobile-menu Dashboard View -->
+
+        <div class="Mobile-menu" id="Mobile-menu">
+          <div class="content d-flex justify-content-between align-items-center top-nav">
+            <div class="user-profile d-flex justify-content-between align-items-center pb-0 gap-3">
+              <h3 class="font-inter-bold mb-0 desktop-only">Dashboard</h3>
+              <div class="d-flex gap profile-box">
+                <div class="progress-container flex flex-1">
+                  <div class="progress-border"></div>
+                  <a href="#user">
+                    <img src="assets/images/Avatar.png" alt="User" class="avatar" >
+                  </a>
+                </div>
+                <a href="#">
+                  <div class="user-name desktop-only font-inter-bold pt-2" style="color: #1f2633">
+                    Nancy Martino
+                    <h6 class="user-profashion font-inter-bold mb-0">
+                      Designer
+                    </h6>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a href="#menu-dashboard" id="menu-toggle">
+              <img src="assets/images/menu_open.svg" alt="menu open" class="icon-open" >
+            </a>
+          </div>
+          <div class="slide-mobile d-none" id="slide-mobile">
+            <div class="dash-menu">
+              <!-- Dashboard Heading -->
+              <div class="d-flex justify-content-between align-items-center py-3 toggle-menu" 
+              data-bs-toggle="collapse"
+              data-bs-target="#dashboard-menu"
+              aria-expanded="false"
+              role="button"
+              style="cursor: pointer;">
+           
+           <h5 class="text-uppercase font-inter-bold desktop-only mb-0">
+             Dashboard
+           </h5>
+         
+           <img src="assets/images/expand_less.svg" alt="Expand menu" class="expand-icon">
+           
+         </div>
+         
+
+              <!-- Dashboard Menu -->
+              <div id="dashboard-menu" class="collapse">
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#inbox">
+                      <img src="assets/images/inbox.svg" alt="Inbox" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Inbox
+                    </div>
+                  </div>
+
+                  <div class="inbox-msg fs-10 fw-bolder desktop-only d-flex justify-content-center align-items-center">
+                    4
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#drive-files">
+                      <img src="assets/images/drive_folder_upload.svg" alt="drive folder upload" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Drive Files
+                    </div>
+                  </div>
+
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    435
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#boards">
+                      <img src="assets/images/dashboard_customize.svg" alt="Boards" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Boards
+                    </div>
+                  </div>
+
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    5
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#updates">
+                      <img src="assets/images/access_time.svg" alt="access time" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Updates
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#analytics">
+                      <img src="assets/images/data_usage.svg" alt="data usage" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Analytics
+                    </div>
+                  </div>
+
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    2
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#crm-dashboard">
+                      <img src="assets/images/space_dashboard.svg" alt="CRM Dashboard" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      CRM Dashboard
+                    </div>
+                  </div>
+
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    2
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#ecmmerce">
+                      <img src="assets/images/sell.svg" alt="sell" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Ecommerce
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#cryptocurrency">
+                      <img src="assets/images/payment.svg" alt="payment" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Cryptocurrency
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#projects">
+                      <img src="assets/images/lock_clock.svg" alt="lock clock" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Projects
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#nft-marketplace">
+                      <img src="assets/images/image_search.svg" alt="Image search" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      NFT Marketplace
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#settings">
+                      <img src="assets/images/tune.svg" alt="CRM Dashboard" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Settings
+                    </div>
+                  </div>
+
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    2
+                  </div>
+                </div>
+              </div>
+
+              <div class="line"></div>
+
+              <!-- Projects Heading -->
+              <div class="d-flex justify-content-between align-items-center py-3 toggle-menu" 
+              data-bs-toggle="collapse"
+              data-bs-target="#projects-menu"
+              aria-expanded="false"
+              role="button"
+              style="cursor: pointer;">
+           
+           <h5 class="text-uppercase font-inter-bold desktop-only mb-0">
+            Projects
+           </h5>
+         
+           <img src="assets/images/expand_less.svg" alt="Expand menu" class="expand-icon">
+           
+         </div>
+         
+            
+              <!-- Projects Menu -->
+              <div id="projects-menu" class="collapse">
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#Additional-calendar">
+                      <img src="assets/images/tag.svg" alt="tag" >
+                    </a>
+                    <div class="fs-12 desktop-only font-inter-semibold desktop-only cursor">
+                      Additional Calendar
+                    </div>
+                  </div>
+
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    6
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#brand-logo-design">
+                      <img src="assets/images/tag.svg" alt="tag" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Brand Logo Design
+                    </div>
+                  </div>
+
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    11
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#user-research">
+                      <img src="assets/images/tag.svg" alt="tag" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      User Research
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#marketing-sales">
+                      <img src="assets/images/tag.svg" alt="tag" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Marketing Sales
+                    </div>
+                  </div>
+
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    23
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#new-project-template">
+                      <img src="assets/images/tag.svg" alt="tag" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      New Project Template
+                    </div>
+                  </div>
+
+                  <div class="inbox-msg desktop-only fs-10 fw-bolder d-flex justify-content-center align-items-center">
+                    2
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center pb-4">
+                  <div class="d-flex gap-3 align-items-center">
+                    <a href="#add-new-project">
+                      <img src="assets/images/add_circle.svg" alt="Add Icon" >
+                    </a>
+                    <div class="fs-12 font-inter-semibold desktop-only cursor">
+                      Add New Project
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-content d-flex justify-content-between">
+          <div class="d-flex align-items-center gap-3">
+            <div class="search-task-box d-flex px-3">
+              <img src="assets/images/search-icon.svg" alt="Search Icon" class="search-icon" >
+              <input type="text" placeholder="Search Tasks" class="search-input" >
+              <img src="assets/images/next-task.svg" alt="Next Menu" class="next-icon" >
+            </div>
+
+            <a href="#" class="voice-search before" id="voiceSearch2">
+              <img src="assets/images/keyboard_voice.svg" alt="Voice Search" >
+            </a>
+            <p id="voiceResult2"></p>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center after-py">
+            <div class="menu d-flex align-items-center">
+              <!-- Toggle Icon -->
+              <i class="fa-solid fa-list fs-4" id="toggleMenu"></i>
+              <!-- Navigation Links -->
+              <ul class="task-links font-inter-bold mb-0 me-5">
+                <li class="link-item">
+                  <i class="fa-solid fa-xmark fs-4" id="xClose"></i>
+                </li>
+                <li>
+                  <a href="#dashboard" class="f-s font-inter-bold link-item" style="color: #323c4d">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#my-task" class="f-s font-inter-bold link-item">MyTasks</a>
+                </li>
+                <li>
+                  <a href="#reporting" class="f-s font-inter-bold link-item">Reporting</a>
+                </li>
+                <li>
+                  <a href="#portfolios" class="f-s font-inter-bold link-item">Portfolios</a>
+                </li>
+                <li>
+                  <a href="#goals" class="f-s font-inter-bold link-item">Goals</a>
+                </li>
+                <li>
+                  <a href="#timeline" class="f-s font-inter-bold link-item li-a">Timeline</a>
+                </li>
+                <li>
+                  <a href="#calendar" class="f-s font-inter-bold link-item li-a">Calendar</a>
+                </li>
+                <li>
+                  <a href="#progress" class="f-s font-inter-bold link-item li-a">Progress</a>
+                </li>
+                <li>
+                  <a href="#forms" class="f-s font-inter-bold link-item li-a">Forms</a>
+                </li>
+                <li>
+                  <a href="#mores" class="f-s font-inter-bold link-item li-a">More</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="right-side-icons d-flex gap-3 align-items-center">
+              <a href="#" class="voice-search after" id="voiceSearch">
+                <img src="assets/images/keyboard_voice.svg" alt="Voice Search" >
+              </a>
+              <p id="voiceResult"></p>
+
+              <a href="#" id="openFolder">
+                <img src="assets/images/folder_open.svg" alt="folder" >
+              </a>
+             <input type="file" id="folderInput" multiple hidden>
+
+
+              <a href="#" id="notificationIcon">
+                <img src="assets/images/notifications_none.svg" alt="Notifications" width="30" >
+              </a>
+              <div id="notificationPopup" class="notification-popup">
+                You have new notifications!
+              </div>
+
+              <div class="profile-container">
+                <div class="progress-borders"></div>
+                <img src="assets/images/Avatar.png" alt="Profile Picture" class="avatar-user" >
+                <div class="notification-badge">2</div>
+                <div class="status-indicator"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="line-2"></div>
+        <div class="task-boards">
+          <div class="d-flex justify-content-between align-items-center wrap">
+            <div class="d-flex gap-4 align-items-center">
+              <h2 class="font-inter-bold mb-0" id="taskTitle">Task Boards</h2>
+              <input type="text" id="taskInput" class="task-input" style="display: none; width: 100%" maxlength="12" >
+              <div>
+                <img src="assets/images/edit.svg" alt="edit" id="editIcon" >
+              </div>
+            </div>
+
+            <ul class="task-links font-inter-bold mb-0 before-task-links">
+              <li><a href="#timeline" class="active">Timeline</a></li>
+              <li><a href="#calendar">Calendar</a></li>
+              <li><a href="#dashboard">Dashboard</a></li>
+              <li><a href="#progress">Progress</a></li>
+              <li><a href="#forms">Forms</a></li>
+              <li><a href="#mores">More</a></li>
+            </ul>
+
+            <div class="d-flex position-relative">
+              <div class="users-profiles">
+                <img src="assets/images/Avatar.png" alt="user" >
+              </div>
+              <div class="users-profiles">
+                <img src="assets/images/Avatar-1.png" alt="user" >
+              </div>
+
+              <div class="users-profiles">
+                <img src="assets/images/Avatar-3.png" alt="user" >
+              </div>
+              <div class="users-profiles">
+                <img src="assets/images/Avatar-2.png" alt="user" >
+              </div>
+
+              <div class="added font-inter-bold d-flex justify-content-center align-items-center">
+                +5
+              </div>
+              <div class="add-plus d-flex justify-content-center align-items-center">
+                <img src="assets/images/dark-gray_add_btn.svg" alt="add btn" >
+              </div>
+            </div>
+          </div>
+
+          <div class="after-task-links">
+            <ul class="d-flex py-2 task-links font-inter-bold mb-0">
+              <li><a href="#timeline" class="active">Timeline</a></li>
+              <li><a href="#calendar">Calendar</a></li>
+              <li><a href="#dashboard">Dashboard</a></li>
+              <li><a href="#progress">Progress</a></li>
+              <li><a href="#forms">Forms</a></li>
+              <li><a href="#mores">More</a></li>
+            </ul>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center py-4 flex-wrap gap-3">
+            <!-- board & List view -->
+            <div class="box-view d-flex">
+              <div class="board d-flex justify-content-center align-items-center gap-2">
+                <img src="assets/images/dashboard.svg" alt="Board View" >
+                <div class="fs-12 font-inter-bold">Board View</div>
+              </div>
+              <div class="list d-flex justify-content-center align-items-center gap-2">
+                <img src="assets/images/hambar-toggle.svg" alt="List View" >
+                <div class="fs-12 font-inter-bold">List View</div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center gap-3">
+              <div class="v-line"></div>
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="assets/images/lock.svg" alt="Lock" >
+                <div class="fs-11 font-inter-bold px-2">Limited Access</div>
+                <img src="assets/images/keyboard_arrow_down.svg" alt="keyboard arrow down" >
+              </div>
+              <div class="v-line"></div>
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="fs-11 font-inter-bold">Owners</div>
+                <div class="bg-cricle d-flex justify-content-center align-items-center mx-4">
+                  <a href="https://twitter.com/yourprofile" target="_blank">
+                    <img src="assets/images/twitter-logo.svg" alt="twitter logo" ></a>
+                </div>
+                <div class="fs-11-c font-inter-bold">Twitter Team</div>
+              </div>
+            </div>
+            <div class="r-wrap d-flex gap-3">
+              <div class="d-flex align-items-center gap-3">
+                <div class="search-task d-flex px-3">
+                  <img src="assets/images/search-icon.svg" alt="Search Icon" class="search-icon" >
+                  <input type="text" placeholder="Search Tasks" class="search-input" style="
+                        flex-grow: 1;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        border: none;
+                        outline: none;
+                      " >
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center gap-2">
+                <!-- Document Upload Icon -->
+                <div class="icon-img" id="uploadTrigger">
+                  <img src="assets/images/documents.svg" alt="Document" >
+                </div>
+
+                <!-- Hidden File Input -->
+                <input type="file" id="fileInput" style="display: none" accept=".pdf,.doc,.docx,.txt" >
+
+                <div class="icon-img">
+                  <img src="assets/images/down_up-hambar.svg" alt="Hambar" >
+                </div>
+                <div class="icon-img">
+                  <img src="assets/images/left-side_hambar.svg" alt="Hambar" >
+                </div>
+                <!-- Clickable Loading Icon -->
+                <div class="icon-img" id="loadingTrigger">
+                  <img src="assets/images/loading.svg" alt="Loading" >
+                </div>
+
+                <!-- Full-Screen Loading Overlay -->
+                <div id="loadingOverlay" class="loading-overlay">
+                  <img src="assets/images/loading.svg" alt="Loading" class="loading-img" >
+                </div>
+
+                <div class="icon-img" id="editTrigger">
+                  <img src="assets/images/dash-edit.svg" alt="dash edit" >
+                </div>
+
+                <!-- Hidden Color Picker -->
+                <input type="color" id="colorPicker" >
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-4 justify-content-between wrap-flex">
+            <!-- Blacklog Tasks -->
+
+            <div class="width">
+              <div class="main-heading-task d-flex justify-content-between align-items-center pt-3">
+                <div class="gap-4 d-flex justify-content-center align-items-center">
+                  <div class="heading font-inter-semibold">Backlog Tasks</div>
+                  <div class="heading-cricle d-flex justify-content-center align-items-center font-inter-bold">
+                    5
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center gap-1">
+                  <div class="loading"></div>
+                  <div class="loading"></div>
+                  <div class="loading"></div>
+                </div>
+              </div>
+
+              <div class="contain mt-4 justify-content-between d-flex">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Model Answer
+                    </div>
+                    <div class="icon d-flex gap-1 align-items-center">
+                      <img src="assets/images/file_coluring.svg" alt="File" >
+                      <span class="count font-inter-bold file">4</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#UI007</span>
+                    <span class="tag tag-blue font-inter-bold">Design</span>
+                    <span class="tag tag-yellow font-inter-bold">Backlog</span>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="avatars-card">
+                      <img src="assets/images/Avatar-2.png" class="avatar-card" alt="User 1" >
+
+                      <img src="assets/images/Avatar-2.png" class="avatar-card" alt="User 1" >
+
+                      <img src="assets/images/Avatar-5.png" class="avatar-card" alt="User 2" >
+                      <div class="more-users">+5</div>
+                      <div class="add-user">
+                        <div class="add-bg">+</div>
+                      </div>
+                    </div>
+                    <div class="icons-img">
+                      <div class="icon d-flex justify-content-center gap-1 align-items-center">
+                        <img src="assets/images/file_present.svg" alt="Attachment" >
+                        <span class="count font-inter-bold attachment">2</span>
+                      </div>
+                      <div class="icon d-flex justify-content-center gap-1 align-items-center">
+                        <img src="assets/images/message.svg" alt="Comments" >
+                        <span class="count font-inter-bold comments">3</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Create calendar, chat and email app pages
+                    </div>
+                    <div class="icon d-flex gap-1 align-items-center">
+                      <img src="assets/images/file_coluring.svg" alt="File" >
+                      <span class="count font-inter-bold file">1</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#UI003</span>
+                    <span class="tag tag-pink font-inter-bold">Development</span>
+                    <span class="tag tag-yellow font-inter-bold">Backlog</span>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="avatars-card">
+                      <img src="assets/images/Avatar-6.png" class="avatar-card" alt="User 1" >
+                      <img src="assets/images/avatar-7.png" class="avatar-card" alt="User 2" >
+                      <div class="more-users">+5</div>
+                      <div class="add-user">
+                        <div class="add-bg">+</div>
+                      </div>
+                    </div>
+                    <div class="icons-img">
+                      <div class="icon d-flex justify-content-center gap-1 align-items-center">
+                        <img src="assets/images/dark-file_present.svg" alt="Attachment" >
+                        <span class="count font-inter-bold attachment-dark">2</span>
+                      </div>
+                      <div class="icon d-flex justify-content-center gap-1 align-items-center">
+                        <img src="assets/images/dark-message.svg" alt="Comments" >
+                        <span class="count font-inter-bold comments-dark">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Product Design, Figma, Sketch (Software), Prototype
+                    </div>
+                    <div class="icon d-flex gap-1 align-items-center">
+                      <img src="assets/images/dark-file.svg" alt="File" >
+                      <span class="count font-inter-bold file-dark">2</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#BC05</span>
+                    <span class="tag tag-gray font-inter-bold">Project</span>
+                    <span class="tag tag-yellow font-inter-bold">Backlog</span>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="avatars-card gap-3">
+                      <img src="assets/images/Avatar-3.png" class="avatar-card" alt="User 1" >
+
+                      <div class="add-user">
+                        <div class="add-bg">+</div>
+                      </div>
+                    </div>
+                    <div class="icons-img">
+                      <div class="icon d-flex justify-content-center gap-1 align-items-center">
+                        <img src="assets/images/dark-file_present.svg" alt="Attachment" >
+                        <span class="count font-inter-bold attachment-dark">2</span>
+                      </div>
+                      <div class="icon d-flex justify-content-center gap-1 align-items-center">
+                        <img src="assets/images/dark-message.svg" alt="Comments" >
+                        <span class="count font-inter-bold comments-dark">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Change email option process
+                    </div>
+                    <div class="icon d-flex gap-1 align-items-center">
+                      <img src="assets/images/dark-file.svg" alt="File" >
+                      <span class="count font-inter-bold file-dark">2</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#FTC07</span>
+
+                    <span class="tag tag-yellow font-inter-bold">Backlog</span>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="avatars-card">
+                      <img src="assets/images/Avatar-2.png" class="avatar-card" alt="User 1" >
+                      <img src="assets/images/Avatar-5.png" class="avatar-card" alt="User 2" >
+                      <div class="more-users">+5</div>
+                      <div class="add-user">
+                        <div class="add-bg">+</div>
+                      </div>
+                    </div>
+                    <div class="icons-img">
+                      <div class="icon d-flex justify-content-center gap-1 align-items-center">
+                        <img src="assets/images/dark-file_present.svg" alt="Attachment" >
+                        <span class="count font-inter-bold attachment-dark">2</span>
+                      </div>
+                      <div class="icon d-flex justify-content-center gap-1 align-items-center">
+                        <img src="assets/images/dark-message.svg" alt="Comments" >
+                        <span class="count font-inter-bold comments-dark">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Post launch reminder/ Post list
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#FTC09</span>
+
+                    <span class="tag tag-yellow font-inter-bold">Backlog</span>
+                  </div>
+                </div>
+              </div>
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="new-card flex-fill">
+                  <div class="add-new justify-content-center d-flex align-items-center">
+                    <img src="assets/images/dark-gray_add_btn.svg" alt="add Btn" >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- To Do Tasks -->
+
+            <div class="width">
+              <div class="main-heading-task d-flex justify-content-between align-items-center pt-3">
+                <div class="gap-4 d-flex justify-content-center align-items-center">
+                  <div class="heading font-inter-semibold">To Do Tasks</div>
+                  <div class="heading-cricle-todo d-flex justify-content-center align-items-center font-inter-bold">
+                    3
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center gap-1">
+                  <div class="loading"></div>
+                  <div class="loading"></div>
+                  <div class="loading"></div>
+                </div>
+              </div>
+
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Model Answer
+                    </div>
+                    <div class="icon d-flex gap-1 align-items-center">
+                      <img src="assets/images/dark-file.svg" alt="File" >
+                      <span class="count font-inter-bold file-dark">1</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#UI005</span>
+                    <span class="tag tag-pink font-inter-bold">To Do</span>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="avatars-card">
+                      <img src="assets/images/Avatar-3.png" class="avatar-card" alt="User 1" >
+                      <img src="assets/images/Avatar-5.png" class="avatar-card" alt="User 2" >
+                      <div class="more-users">+5</div>
+                      <div class="add-user">
+                        <div class="add-bg">+</div>
+                      </div>
+                    </div>
+                    <div class="icons-img">
+                      <div class="icon d-flex justify-content-center align-items-center gap-1">
+                        <img src="assets/images/dark-file_present.svg" alt="Attachment" >
+                        <span class="count font-inter-bold attachment-dark">2</span>
+                      </div>
+                      <div class="icon d-flex justify-content-center align-items-center gap-1">
+                        <img src="assets/images/dark-message.svg" alt="Comments" >
+                        <span class="count font-inter-bold comments-dark">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Add authentication pages
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#UI005</span>
+                    <span class="tag tag-pink font-inter-bold">To Do</span>
+                  </div>
+                </div>
+              </div>
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Profile Page Satructure
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#UI008</span>
+                    <span class="tag tag-pink font-inter-bold">To Do</span>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="avatars-card gap-3">
+                      <img src="assets/images/Avatar-4.png" class="avatar-card" alt="User 1" >
+
+                      <div class="add-user">
+                        <div class="add-bg">+</div>
+                      </div>
+                    </div>
+                    <div class="icons-img">
+                      <div class="icon d-flex justify-content-center align-items-center gap-1">
+                        <img src="assets/images/dark-file_present.svg" alt="Attachment" >
+                        <span class="count font-inter-bold attachment-dark">2</span>
+                      </div>
+                      <div class="icon d-flex justify-content-center align-items-center gap-1">
+                        <img src="assets/images/dark-message.svg" alt="Comments" >
+                        <span class="count font-inter-bold comments-dark">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Create calendar, chat and email app pages
+                    </div>
+                    <div class="icon d-flex gap-1 align-items-center">
+                      <img src="assets/images/file_coluring.svg" alt="File" >
+                      <span class="count font-inter-bold file">1</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#FTC07</span>
+                    <span class="tag tag-pink font-inter-bold">Development</span>
+                    <span class="tag tag-yellow font-inter-bold">Backlog</span>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="avatars-card">
+                      <img src="assets/images/Avatar-6.png" class="avatar-card" alt="User 1" >
+                      <img src="assets/images/avatar-7.png" class="avatar-card" alt="User 2" >
+                      <div class="more-users">+5</div>
+                      <div class="add-user">
+                        <div class="add-bg">+</div>
+                      </div>
+                    </div>
+                    <div class="icons-img">
+                      <div class="icon d-flex justify-content-center align-items-center gap-1">
+                        <img src="assets/images/dark-file_present.svg" alt="Attachment" >
+                        <span class="count font-inter-bold attachment-dark">2</span>
+                      </div>
+                      <div class="icon d-flex justify-content-center align-items-center gap-1">
+                        <img src="assets/images/dark-message.svg" alt="Comments" >
+                        <span class="count font-inter-bold comments-dark">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="new-card flex-fill">
+                  <div class="add-new justify-content-center d-flex align-items-center">
+                    <img src="assets/images/dark-gray_add_btn.svg" alt="add Btn" >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- In Process -->
+
+            <div class="width">
+              <div class="main-heading-task d-flex justify-content-between align-items-center pt-3">
+                <div class="gap-4 d-flex justify-content-center align-items-center">
+                  <div class="heading font-inter-semibold">In Process</div>
+                  <div class="heading-cricle-process d-flex justify-content-center align-items-center font-inter-bold">
+                    2
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center gap-1">
+                  <div class="loading"></div>
+                  <div class="loading"></div>
+                  <div class="loading"></div>
+                </div>
+              </div>
+
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Model Answer
+                    </div>
+                    <div class="icon d-flex gap-1 align-items-center">
+                      <img src="assets/images/dark-file_present.svg" alt="File" >
+                      <span class="count font-inter-bold file-dark">1</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#002</span>
+                    <span class="tag tag-purple font-inter-bold">In Process</span>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mt-3 gap-3">
+                    <div class="avatars-card">
+                      <img src="assets/images/Avatar-2.png" class="avatar-card" alt="User 1" >
+                      <img src="assets/images/Avatar-5.png" class="avatar-card" alt="User 2" >
+                      <div class="more-users">+5</div>
+                      <div class="add-user">
+                        <div class="add-bg">+</div>
+                      </div>
+                    </div>
+                    <div class="icons-img d-flex align-items-center justify-content-center">
+                      <div class="icon d-flex align-items-center justify-content-center gap-1">
+                        <img src="assets/images/dark-file_present.svg" alt="Attachment" >
+                        <span class="count font-inter-bold attachment-dark">2</span>
+                      </div>
+                      <div class="icon d-flex align-items-center justify-content-center gap-1">
+                        <img src="assets/images/dark-message.svg" alt="Comments" >
+                        <span class="count font-inter-bold comments-dark">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Model Answer
+                    </div>
+                    <div class="icon d-flex gap-1 align-items-center">
+                      <img src="assets/images/dark-file_present.svg" alt="File" >
+                      <span class="count font-inter-bold file-dark">1</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#002</span>
+                    <span class="tag tag-purple font-inter-bold">In Process</span>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mt-3 gap-3">
+                    <div class="avatars-card">
+                      <img src="assets/images/Avatar-2.png" class="avatar-card" alt="User 1" >
+                      <img src="assets/images/Avatar-5.png" class="avatar-card" alt="User 2" >
+                      <div class="more-users">+5</div>
+                      <div class="add-user">
+                        <div class="add-bg">+</div>
+                      </div>
+                    </div>
+                    <div class="icons-img d-flex align-items-center justify-content-center">
+                      <div class="icon d-flex align-items-center justify-content-center gap-1">
+                        <img src="assets/images/dark-file_present.svg" alt="Attachment" >
+                        <span class="count font-inter-bold attachment-dark">2</span>
+                      </div>
+                      <div class="icon d-flex align-items-center justify-content-center gap-1">
+                        <img src="assets/images/dark-message.svg" alt="Comments" >
+                        <span class="count font-inter-bold comments-dark">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="new-card flex-fill">
+                  <div class="add-new justify-content-center d-flex align-items-center">
+                    <img src="assets/images/dark-gray_add_btn.svg" alt="add Btn" >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Done -->
+
+            <div class="width">
+              <div class="main-heading-task d-flex justify-content-between align-items-center pt-3">
+                <div class="gap-4 d-flex justify-content-center align-items-center">
+                  <div class="heading font-inter-semibold">Done</div>
+                  <div class="heading-cricle-done d-flex justify-content-center align-items-center font-inter-bold">
+                    5
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center gap-1">
+                  <div class="loading"></div>
+                  <div class="loading"></div>
+                  <div class="loading"></div>
+                </div>
+              </div>
+
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Model Answer
+                    </div>
+                    <div class="icon d-flex gap-1 align-items-center">
+                      <img src="assets/images/dark-file.svg" alt="File" >
+                      <span class="count font-inter-bold file-dark">1</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#002</span>
+                    <span class="tag tag-green font-inter-bold">Done</span>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="avatars-card">
+                      <img src="assets/images/Avatar-3.png" class="avatar-card" alt="User 1" >
+                      <img src="assets/images/Avatar-5.png" class="avatar-card" alt="User 2" >
+                      <div class="more-users">+5</div>
+                      <div class="add-user">
+                        <div class="add-bg">+</div>
+                      </div>
+                    </div>
+                    <div class="icons-img">
+                      <div class="icon d-flex justify-content-center align-items-center gap-1">
+                        <img src="assets/images/dark-file_present.svg" alt="Attachment" >
+                        <span class="count font-inter-bold attachment-dark">2</span>
+                      </div>
+                      <div class="icon d-flex justify-content-center align-items-center gap-1">
+                        <img src="assets/images/dark-message.svg" alt="Comments" >
+                        <span class="count font-inter-bold comments-dark">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Create calendar, chat and email app pages
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#002</span>
+                    <span class="tag tag-green font-inter-bold">Done</span>
+                  </div>
+                </div>
+              </div>
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Product Design, Figma, Sketch (Software), Prototype
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#002</span>
+                    <span class="tag tag-green font-inter-bold">Done</span>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="avatars-card gap-3">
+                      <img src="assets/images/Avatar-1.png" class="avatar-card" alt="User 1" >
+
+                      <div class="add-user">
+                        <div class="add-bg">+</div>
+                      </div>
+                    </div>
+                    <div class="icons-img">
+                      <div class="icon d-flex justify-content-center align-items-center gap-1">
+                        <img src="assets/images/dark-file_present.svg" alt="Attachment" >
+                        <span class="count font-inter-bold attachment-dark">2</span>
+                      </div>
+                      <div class="icon d-flex justify-content-center align-items-center gap-1">
+                        <img src="assets/images/dark-message.svg" alt="Comments" >
+                        <span class="count font-inter-bold comments-dark">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Model Answer
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#002</span>
+                    <span class="tag tag-purple font-inter-bold">To Verify</span>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <div class="avatars-card">
+                      <img src="assets/images/Avatar-6.png" class="avatar-card" alt="User 1" >
+                      <img src="assets/images/Avatar-2.png" class="avatar-card" alt="User 2" >
+
+                      <div class="more-users">+5</div>
+                      <div class="add-user">
+                        <div class="add-bg">+</div>
+                      </div>
+                    </div>
+                    <div class="icons-img">
+                      <div class="icon d-flex justify-content-center align-items-center gap-1">
+                        <img src="assets/images/dark-file_present.svg" alt="Attachment" >
+                        <span class="count font-inter-bold attachment-dark">2</span>
+                      </div>
+                      <div class="icon d-flex justify-content-center align-items-center gap-1">
+                        <img src="assets/images/dark-message.svg" alt="Comments" >
+                        <span class="count font-inter-bold comments-dark">4</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="custom-card flex-fill">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="mb-0 font-inter-semibold model">
+                      Create calendar, chat and email app pages
+                    </div>
+                  </div>
+
+                  <div class="mt-2 d-flex align-items-center gap-2">
+                    <span class="tag tag-gray font-inter-bold">#002</span>
+                    <span class="tag tag-green font-inter-bold">Done</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contain mt-4 d-flex justify-content-between">
+                <div class="new-card flex-fill">
+                  <div class="add-new justify-content-center d-flex align-items-center">
+                    <img src="assets/images/dark-gray_add_btn.svg" alt="add Btn" >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT-END -->
+
+      <div class="right-end">
+        <div class="close d-flex justify-content-center align-items-center">
+          <img src="assets/images/close.svg" alt="Close" >
+        </div>
+        <div class="d-flex justify-content-center align-items-center eqal">
+          <div class="avatars">
+            <div class="avatar-pic">
+              <img src="assets/images/Avatar.png" alt="avatar" class="img-fluid" >
+            </div>
+            <div class="avatar-pic">
+              <img src="assets/images/Avatar-3.png" alt="avatar" class="img-fluid" >
+            </div>
+            <div class="avatar-pic">
+              <img src="assets/images/Avatar-4.png" alt="avatar" class="img-fluid" >
+            </div>
+            <div class="avatar-pic">
+              <img src="assets/images/Avatar-6.png" alt="avatar" class="img-fluid" >
+            </div>
+            <div class="avatar-pic">
+              <img src="assets/images/Avatar-5.png" alt="avatar" class="img-fluid" >
+            </div>
+            <div class="avatar-content-progress">
+              <div class="avatar-ring">
+                <img src="assets/images/Avatar-2.png" class="avatar-images img-fluid" alt="User Avatar" >
+              </div>
+              <div class="status-indicator-green"></div>
+            </div>
+            <div
+              class="avatar-pic avatar-user-name-mh font-inter-bold d-flex justify-content-center align-items-center">
+              MH
+            </div>
+            <div class="avatar-pic">
+              <img src="assets/images/Avatar-6.png" alt="avatar" class="img-fluid" >
+            </div>
+            <div
+              class="avatar-pic avatar-user-name-zg font-inter-bold d-flex justify-content-center align-items-center">
+              ZG
+            </div>
+            <div class="avatar-pic">
+              <div class="avatar-content">
+                <img src="assets/images/Avatar-1.png" class="avatar-imgs img-fluid" alt="User Avatar" >
+                <div class="notifications-badge">2</div>
+                <div class="status-indicators"></div>
+              </div>
+            </div>
+            <div class="avatar-pic">
+              <img src="assets/images/Avatar-6.png" alt="avatar" class="img-fluid" >
+            </div>
+            <div class="avatar-pic">
+              <div class="avatar-content">
+                <img src="assets/images/Avatar-6.png" class="avatar-imgs img-fluid" alt="User Avatar" >
+                <div class="notifications-badge">32</div>
+              </div>
+            </div>
+            <div
+              class="avatar-pic avatar-user-name-zg font-inter-bold d-flex justify-content-center align-items-center">
+              ZG
+            </div>
+            <div
+              class="avatar-pic avatar-user-name-jk font-inter-bold d-flex justify-content-center align-items-center">
+              JK
+            </div>
+            <div
+              class="avatar-pic avatar-user-name-th font-inter-bold d-flex justify-content-center align-items-center">
+              TH
+            </div>
+            <div class="avatar-pic">
+              <img src="assets/images/Avatar-6.png" alt="avatar" class="img-fluid" >
+            </div>
+          </div>
+        </div>
+        <div class="arrow d-flex justify-content-center align-items-center">
+          <img src="assets/images/arrow_forward.svg" alt="Arrow Forward" >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

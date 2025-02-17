@@ -1,0 +1,291 @@
+/* ✅ Importing Global Fonts */
+
+/* Inter Bold */
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter18pt-Bold.woff2') format('woff2'),
+      url('Inter18pt-Bold.woff') format('woff'),
+      url('Inter18pt-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Inter SemiBold */
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('Inter18pt-SemiBold.woff2') format('woff2'),
+      url('Inter18pt-SemiBold.woff') format('woff'),
+      url('Inter18pt-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Inter Medium */
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('Inter18pt-Medium.woff2') format('woff2'),
+      url('Inter18pt-Medium.woff') format('woff'),
+      url('Inter18pt-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Inter Regular */
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('Inter18pt-Regular.woff2') format('woff2'),
+      url('Inter18pt-Regular.woff') format('woff'),
+      url('Inter18pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Inter Light */
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('Inter18pt-Light.woff2') format('woff2'),
+      url('Inter18pt-Light.woff') format('woff'),
+      url('Inter18pt-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  /* Fonts Poppins-ExtraBold */
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('Poppins-ExtraBold.woff2') format('woff2'),
+      url('Poppins-ExtraBold.woff') format('woff'),
+      url('Poppins-ExtraBold.ttf') format('truetype');
+  font-weight:800;
+  font-style: normal;
+  font-display: swap;
+}
+ /* Fonts Poppins-Bold */
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('Poppins-Bold.woff2') format('woff2'),
+      url('Poppins-Bold.woff') format('woff'),
+      url('Poppins-Bold.ttf') format('truetype');
+  font-weight:700;
+  font-style: normal;
+  font-display: swap;
+}
+
+ /* Fonts Poppins-SemiBold */
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('Poppins-SemiBold.woff2') format('woff2'),
+      url('Poppins-SemiBold.woff') format('woff'),
+      url('Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+ /* Fonts Poppins-Medium */
+
+ @font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Medium.woff2') format('woff2'),
+        url('Poppins-Medium.woff') format('woff'),
+        url('Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+ /* Fonts Poppins-Regular */
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('Poppins-Regular.woff2') format('woff2'),
+    url('Poppins-Regular.woff') format('woff'),
+    url('Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+ /* Fonts Poppins-Light */
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Light.woff2') format('woff2'),
+        url('Poppins-Light.woff') format('woff'),
+        url('Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* Fonts-face Robot-ExtraBold */
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-ExtraBold.woff2') format('woff2'),
+      url('Roboto-ExtraBold.woff') format('woff'),
+      url('Roboto-ExtraBold.ttf') format('truetype');
+  font-weight:800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fonts-face Robot-Bold */
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Bold.woff2') format('woff2'),
+      url('Roboto-Bold.woff') format('woff'),
+      url('Roboto-Bold.ttf') format('truetype');
+  font-weight:700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fonts-face Robot-SemiBold */
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('RobotoCondensed-SemiBold.woff2') format('woff2'),
+      url('RobotoCondensed-SemiBold.woff') format('woff'),
+      url('RobotoCondensed-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fonts-face Robot-Medium */
+
+@font-face {
+  font-family: 'Roboto SemiCondensed';
+  src: url('RobotoSemiCondensed-Medium.woff2') format('woff2'),
+      url('RobotoSemiCondensed-Medium.woff') format('woff'),
+      url('RobotoSemiCondensed-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fonts-face Robot-Regular */
+
+@font-face {
+  font-family: 'Roboto SemiCondensed';
+  src: url('RobotoSemiCondensed-Regular.woff2') format('woff2'),
+      url('RobotoSemiCondensed-Regular.woff') format('woff'),
+      url('RobotoSemiCondensed-Regular.ttf') format('truetype');
+  font-weight:400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fonts-face Robot-Light */
+
+@font-face {
+  font-family: 'Roboto SemiCondensed';
+  src: url('RobotoSemiCondensed-Light.woff2') format('woff2'),
+      url('RobotoSemiCondensed-Light.woff') format('woff'),
+      url('RobotoSemiCondensed-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+  
+  /* ✅ Font Classes for Bootstrap */
+  
+  .font-inter-bold {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+  
+  .font-inter-semibold {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-inter-medium {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  }
+  
+  .font-inter-regular {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400;
+  }
+  
+  .font-inter-light{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+  }
+  
+  
+
+  /* ✅ Font Classes for Bootstrap Poppins Font-family */
+  
+  .font-Poppins-bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+  }
+  
+  .font-Poppins-semibold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-Poppins-medium {
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+  }
+  
+  .font-Poppins-regular {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 400;
+  }
+  
+  
+  .font-Poppins-light {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+  }
+  
+  
+  /* ✅ Font Classes for Bootstrap Roboto-Font-family */
+  
+  .font-Roboto-bold {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+  }
+  
+  .font-Roboto-semibold {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-Roboto-medium {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
+  
+  .font-Roboto-regular {
+    font-family: 'Robotor', sans-serif !important;
+    font-weight: 400;
+  }
+  
+  
+  
