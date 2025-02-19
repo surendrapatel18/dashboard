@@ -45,22 +45,6 @@ document
     }
   });
 
-// Toggle List Menu
-
-const toggleMenu = document.getElementById("toggleMenu");
-const menuLinks = document.querySelector(".task-links");
-const linkItems = document.querySelectorAll(".link-item");
-
-toggleMenu.addEventListener("click", function () {
-  menuLinks.classList.toggle("show");
-});
-
-linkItems.forEach((link) => {
-  link.addEventListener("click", function () {
-    menuLinks.classList.remove("show");
-  });
-});
-
 // Edit Tasks Boards
 
 const taskTitle = document.getElementById("taskTitle");
@@ -196,22 +180,6 @@ document
     }, 3000);
   });
 
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const slideMobile = document.getElementById("slide-mobile");
-    const dashboardHeading = document.getElementById("dashboard-heading");
-    const dashboardMenu = document.getElementById("dashboard-menu");
-    const projectsHeading = document.getElementById("projects-heading");
-    const projectsMenu = document.getElementById("projects-menu");
-
-  
-    menuToggle.addEventListener("click", function (event) {
-      event.preventDefault();
-      slideMobile.classList.toggle("d-none");
-    });
-  }); 
-
 //   Mobile Voice-Icon
 
 const voiceSearch2 = document.getElementById("voiceSearch2");
@@ -248,22 +216,67 @@ if ("webkitSpeechRecognition" in window || "SpeechRecognition" in window) {
   voiceResult2.innerText = "Your browser does not support voice recognition.";
 }
 
-// Dasktop Dropdown 
+document.addEventListener("DOMContentLoaded", function () {
+  const headings = document.querySelectorAll(
+    ".dash-menu > .d-flex.justify-content-between.align-items-center.py-3"
+  );
 
-document.addEventListener('DOMContentLoaded', function () {
-  function setupCollapsibleIconRotation(toggleId, iconClass) {
-    const toggleElement = document.getElementById(toggleId);
-    if (!toggleElement) return;
+  headings.forEach((heading) => {
+    heading.addEventListener("click", function () {
+      const menu = this.nextElementSibling;
+      const icon = this.querySelector(".expand-icon");
 
-    const iconElement = toggleElement.querySelector(iconClass);
-    if (!iconElement) return;
+      // Toggle menu visibility
+      menu.classList.toggle("hidden");
 
-    toggleElement.addEventListener('click', function () {
-      const isExpanded = toggleElement.getAttribute('aria-expanded') === 'true';
-      iconElement.style.transform = isExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+      // Rotate icon
+      icon.classList.toggle("rotated");
     });
-  }
-
-  setupCollapsibleIconRotation('dashboard-toggle', '.expand-icon');
-  setupCollapsibleIconRotation('projects-toggle', '.expand-icon');
+  });
 });
+
+// JavaScript to handle menu toggle
+document.querySelector(".icon-list").addEventListener("click", function (e) {
+  e.preventDefault();
+  document.querySelector(".left-side").classList.add("active");
+  document.querySelector(".overlay").classList.add("active");
+});
+
+document.querySelector(".overlay").addEventListener("click", function () {
+  document.querySelector(".left-side").classList.remove("active");
+  this.classList.remove("active");
+});
+
+// Optional: Close menu when clicking close button inside sidebar
+function closeBtn() {
+  document.querySelector(".left-side").classList.remove("active");
+  document.querySelector(".overlay").classList.remove("active");
+}
+
+// Notification POP-UP Mobile
+
+document
+  .getElementById("notificationIcon2")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    let popup = document.getElementById("notificationPopup2");
+
+    if (popup.style.display === "none" || popup.style.display === "") {
+      popup.style.display = "block";
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 1000);
+    } else {
+      popup.style.display = "none";
+    }
+  });
+
+// Function to open the toggle menu
+function toggleMenu() {
+  document.getElementById("toggleMenu").classList.add("active");
+}
+
+// Function to close the toggle menu
+function closeToggleMenu() {
+  document.getElementById("toggleMenu").classList.remove("active");
+}

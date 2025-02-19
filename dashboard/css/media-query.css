@@ -1,26 +1,6 @@
 /* Responsive-Screens-Desktop 1440px */
 
 @media only screen and (max-width:1440px) {
-    .top-content {
-        flex-direction: column-reverse;
-    }
-
-    .after-task-links {
-        display: block;
-    }
-
-    .before-task-links {
-        display: none;
-    }
-
-    .after-py {
-        padding: 12px 0;
-    }
-
-    .wrap-flex {
-        flex-wrap: wrap;
-    }
-
 
     .custom-card,
     .new-card {
@@ -33,7 +13,94 @@
         width: 100%;
     }
 
+    .right-end {
+        display: none;
+    }
+
 }
+
+
+@media only screen and (max-width:1200px) {
+
+    .left-side {
+        background-color: #FFFFFF;
+    }
+
+    .overlay {
+        display: none !important;
+    }
+
+    .menu-center {
+        margin-left: 0;
+    }
+
+    .search-task-box {
+        box-shadow: 4px 4px 5px 8px rgba(173, 174, 177, 0.05);
+    }
+
+
+    /* 🔹 Sidebar Styles */
+    .toggleMenu {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease-in-out;
+        padding: 20px;
+        overflow-y: auto;
+        scrollbar-width: none;
+        display: flex;
+        flex-direction: column;
+        z-index: 999;
+    }
+
+    /* 🔹 Open State */
+    .toggleMenu.active {
+        right: 0;
+    }
+
+    /* 🔹 Close Button */
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        border: none;
+        background: none;
+        font-size: 22px;
+        opacity: 0.4;
+        cursor: pointer;
+    }
+
+    /* 🔹 Sidebar Links */
+    .task-links {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .task-links li {
+        margin: 0;
+    }
+
+
+}
+
+@media (max-width: 1199px) {
+    .left-side {
+        transform: translateX(-100%);
+    }
+
+    .left-side.active {
+        transform: translateX(0);
+    }
+
+}
+
 
 @media only screen and (max-width:1110px) {
 
@@ -46,45 +113,14 @@
 
 @media only screen and (max-width:1024px) {
 
-    #toggleMenu {
-        display: block;
-    }
-
-    .task-links {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 250px;
-        height: 100vh;
-        background: white;
-        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        transition: left 0.3s ease-in-out;
-        z-index: 99;
-    }
-
-    .task-links.show {
-        left: 0;
-    }
-
-    .task-links li {
-        margin-bottom: 10px;
-    }
-
-    #xClose,
-    .li-a {
-        display: block;
+    .r-row {
+        flex-direction: row-reverse;
     }
 
 }
 
 @media only screen and (max-width:922px) {
 
-    .left-side {
-        display: none;
-    }
 
     .Mobile-menu {
         display: block;
@@ -120,15 +156,31 @@
         display: none;
     }
 
-    .right-end {
-        display: none;
+
+    .search::placeholder {
+        color: transparent;
     }
 }
 
 @media only screen and (max-width:614px) {
 
-    h2 {
-        font-size: 20px !important;
+    .md-left {
+        margin-left: 12px;
+    }
+
+    .row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .col-12 {
+        flex: 0 0 auto;
+        width: 85%;
+    }
+
+    .wrap {
+        flex-wrap: wrap;
+        gap: 12px;
     }
 
 
@@ -136,27 +188,30 @@
 
 
 @media only screen and (max-width:546px) {
-    .wrap {
-        flex-direction: column-reverse;
-        gap: 12px;
-    }
 
     .r-wrap {
         flex-direction: column-reverse;
     }
 
+    .content {
+        border: none;
+    }
+
+
 }
 
 @media only screen and (max-width:475px) {
 
-    .content,
-    .slide-mobile,
-    .top-content {
+    .content {
         padding: 0 20px;
     }
 
     .task-boards {
         padding: 32px 20px;
+    }
+
+    .top-content {
+        padding: 20px;
     }
 
     .after {
@@ -166,10 +221,16 @@
     .before {
         display: none;
     }
+
+    h2 {
+        font-size: 24px !important;
+    }
 }
 
-@media only screen and(max-width:375px) {
+@media only screen and(max-width:425px) {
+
     h3 {
         display: none !important;
     }
+
 }
